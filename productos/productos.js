@@ -5,7 +5,7 @@
   async function fetchMuebles() {
       try {
         // Hacemos la solicitud HTTP: PEDIMOS A LA API, QUE NOS DE LOS POSTS (QUE USAREMOS COMO muebles)
-        const respuesta = await fetch("muebles.json");
+        const respuesta = await fetch("/data/muebles.json");
         if (!respuesta.ok) throw new Error("No se pudo cargar muebles.json");
         
         const muebles = await respuesta.json(); // Extraemos el JSON de la respuesta
