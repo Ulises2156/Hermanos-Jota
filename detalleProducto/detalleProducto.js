@@ -1,6 +1,13 @@
-  const catalogo = document.getElementById("catalogo"); // contenedor principal
+const currentUrl = window.location.href;
+console.log(currentUrl);
+
+index=currentUrl.indexOf("id")
+urlId=currentUrl.slice(index+3,)
+//console.log(index,urlId);
+urlId=parseInt(urlId)
 
 
+const contenido = document.getElementById("contenido"); // 
 
   async function fetchMuebles() {
       try {
@@ -14,7 +21,9 @@
         // Creamos una tarjeta por cada curso.
         // foreach recorre cada elemento del array
         muebles.forEach(mueble => {
-          const card = document.createElement("div"); // Creamos un div
+          if (mueble.id===urlId){
+            
+            const card = document.createElement("div"); // Creamos un div
           card.className = "card"; // Le asignamos clase CSS para estilo
 
           //imagen para cada mueble
@@ -40,14 +49,16 @@
           card.appendChild(btnDetail);
 
           // Agregamos la tarjeta al contenedor de tarjetas
-          catalogo.appendChild(card);
-        });
+          contenido.appendChild(card);
+        }
+          } );
+          
 
       } catch (error) {
         // Manejo de errores: si algo sale mal en el pedido. Vamos a hacer esto:
         console.error("Error al cargar productos:", error); //mostrar error por consola
         // Mostramos mensaje al usuario
-        error = createElement("p")
+        error = document.createElement("p")
         error.textContent = "No se pudieron cargar los productos"
       }
     }
