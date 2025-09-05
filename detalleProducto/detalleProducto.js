@@ -1,11 +1,18 @@
-  const catalogo = document.getElementById("catalogo"); // contenedor principal
+const currentUrl = window.location.href;
+console.log(currentUrl);
+
+index=currentUrl.indexOf("id")
+urlId=currentUrl.slice(index+3,)
+//console.log(index,urlId);
+urlId=parseInt(urlId)
 
 
+const contenido = document.getElementById("contenido"); // 
 
   async function fetchMuebles() {
       try {
         // Hacemos la solicitud HTTP: PEDIMOS A LA API, QUE NOS DE LOS POSTS (QUE USAREMOS COMO muebles)
-        const respuesta = await fetch("muebles.json");
+        const respuesta = await fetch("/data/muebles.json");
         if (!respuesta.ok) throw new Error("No se pudo cargar muebles.json");
         
         const muebles = await respuesta.json(); // Extraemos el JSON de la respuesta
@@ -14,7 +21,9 @@
         // Creamos una tarjeta por cada curso.
         // foreach recorre cada elemento del array
         muebles.forEach(mueble => {
-          const card = document.createElement("div"); // Creamos un div
+          if (mueble.id===urlId){
+            
+            const card = document.createElement("div"); // Creamos un div
           card.className = "card"; // Le asignamos clase CSS para estilo
 
           //imagen para cada mueble
@@ -25,8 +34,10 @@
           const titulo = document.createElement("h3"); // Creamos un título para. la tarjeta
           titulo.textContent = mueble.nombre; // Llenamos el contenido con el título que nos llega de cada elemento de "courses"
 
-          const btnDetail = document.createElement("button"); // botón para ver detalle
-          btnDetail.textContent = "Ver Detalle"; // le ponemos el texto que queremos que muestre el botón
+          const btnDetail = document.createElement("a"); // botón para ver detalle
+          btnDetail.textContent = "Ver Detalle"; 
+          // le ponemos el texto que queremos que muestre el botón
+          btnDetail.setAttribute('href',`/./detalleProducto/producto.html?id=${mueble.id}`)
 
           // Evento onclick al hacer clic: mostramos detalle (esta es otra forma de hacer el addEventListener, ambas están bien)
           btnDetail.onclick = () => showDetail(mueble);
@@ -38,15 +49,17 @@
           card.appendChild(btnDetail);
 
           // Agregamos la tarjeta al contenedor de tarjetas
-          catalogo.appendChild(card);
-        });
+          contenido.appendChild(card);
+        }
+          } );
+          
 
       } catch (error) {
         // Manejo de errores: si algo sale mal en el pedido. Vamos a hacer esto:
-        console.error("Error al cargar cursos:", error); //mostrar error por consola
+        console.error("Error al cargar productos:", error); //mostrar error por consola
         // Mostramos mensaje al usuario
-        error = createElement("p")
-        error.textContent = "No se pudieron cargar los cursos 😢"
+        error = document.createElement("p")
+        error.textContent = "No se pudieron cargar los productos"
       }
     }
 

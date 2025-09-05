@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles producto</title>
+    <link rel="shortcut icon" href="/img/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="stylesProducto.css">
+    <link rel="stylesheet" href="/styles.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Hermanos Jota</h1>
-        <div class="carrito">
-            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-            <span class="contador">0</span>
+        <a href="/index.html">
+            <img class="logo-completo" src="/img/logo completo.png" alt="Logo Hermanos Jota">
+        </a>
+
+        <div class="nav-cart">
+            <nav>
+                <ul>
+                    <li><a href="/productos/productos.html">Productos</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="/contacto/contactos.html">Contacto</a></li>
+                </ul>
+            </nav>   
+            <div class="cart-icon-container">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-counter" class="cart-counter">0</span>
+            </div>   
         </div>
     </header>
     <main>
-        <section class="producto">
+        <section class="producto" id="contenido">
 
-            <img class="imagen-producto" src="/Kit de imágenes/Aparador Uspallata.png" alt="Aparador Uspallata" class="producto-imagen">
+            <img class="imagen-producto" src="/img/Aparador Uspallata.png" alt="Aparador Uspallata" class="producto-imagen">
             
             <div class="detalles-producto">
             <h2>Mueble uspallata</h2>
@@ -40,5 +54,6 @@
     <footer>
         <p>© 2025 Hermanos Jota. Todos los derechos reservados.</p>
     </footer>
+    <script src="detalleProducto.js"></script>
 </body>
 </html>
