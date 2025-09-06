@@ -9,24 +9,30 @@
 </head>
 <body>
   <header>
-        <a href="index.html">
-            <img class="logo-completo" src="Kit de imágenes/logo completo.png" alt="Logo Hermanos Jota">
-        </a>
+    <!-- Menú hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-        <div class="nav-cart">
-            <nav>
-                <ul>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="#about">Sobre Nosotros</a></li>
-                    <li><a href="contactos.html">Contacto</a></li>
-                </ul>
-            </nav>   
-            <div class="cart-icon-container">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="cart-counter" class="cart-counter">0</span>
-            </div>   
-        </div>
-    </header>
+    <a href="index.html" class="logo-container">
+      <img class="logo-completo" src="Kit de imágenes/logo completo.png" alt="Logo Hermanos Jota">
+    </a>
+
+    <!-- Carrito -->
+    <div class="cart-icon-container">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-counter" class="cart-counter">0</span>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="contactos.html">Contacto</a>
+    </nav>
+  </header>
 
   <main class="main">
     <section class="hero-banner">
@@ -40,42 +46,43 @@
     <section class="featured-products">
       <h2>Productos Destacados</h2>
       <div class="product-grid">
-        
+        <!-- Producto 1 -->
         <article class="product-card">
-          <img src="Kit de imágenes/Sillón Copacabana.png" alt="Sillón de Roble Clásico">
+          <img src="Kit de imágenes/Sillón Copacabana.png" alt="Sillón Copacabana">
           <div class="product-info">
-            <h3>Sillon Copacabana</h3>
+            <h3>Sillón Copacabana</h3>
             <p class="price">$850.00</p>
-            <a href="producto.html?id=sillon-1" class="details-link">Ver Detalles</a>
-          </div> 
-        </article>
-        
-        <article class="product-card">
-          <img src="Kit de imágenes/Mesa Comedor Pampa.png" alt="Mesa de Comedor Nogal">
-          <div class="product-info">
-            <h3>Mesa de Comedor Pampa</h3> 
-            <p class="price">$1200.00</p>
-            <a href="producto.html?id=mesa-comedor-2" class="details-link">Ver Detalles</a>
+            <a href="producto.html?id=1" class="details-link">Ver Detalles</a>
           </div>
         </article>
+
         
         <article class="product-card">
-          <img src="Kit de imágenes/Biblioteca Recoleta.png" alt="Librero Modular de Haya">
+          <img src="Kit de imágenes/Mesa Comedor Pampa.png" alt="Mesa de Comedor Pampa">
+          <div class="product-info">
+            <h3>Mesa de Comedor Pampa</h3>
+            <p class="price">$1200.00</p>
+            <a href="producto.html?id=2" class="details-link">Ver Detalles</a>
+          </div>
+        </article>
+
+        
+        <article class="product-card">
+          <img src="Kit de imágenes/Biblioteca Recoleta.png" alt="Biblioteca Recoleta">
           <div class="product-info">
             <h3>Biblioteca Recoleta</h3>
             <p class="price">$550.00</p>
-            <a href="producto.html?id=librero-3" class="details-link">Ver Detalles</a>
+            <a href="producto.html?id=3" class="details-link">Ver Detalles</a>
           </div>
         </article>
       </div>
     </section>
   </main>
+
   <footer>
-    <p>&copy;2025 Hermanos Jota Furniture. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Hermanos Jota Furniture. Todos los derechos reservados.</p>
     <p>Contacto: brand@hermanosjota.com</p>
     <p>Redescubriendo el arte de vivir desde 2025</p>
   </footer>
-  <script src="contactos.js"></script>
-
 </body>
 </html>
