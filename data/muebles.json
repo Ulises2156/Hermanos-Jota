@@ -14,7 +14,7 @@
      "rotacion": "",
     "garantia": "",
     "precio": 1250,
-    "imagen": "./Kit de imágenes/Aparador Uspallata.png"
+    "imagen": "/img/Aparador Uspallata.png"
   },
   {
     "id": 2,
@@ -31,7 +31,7 @@
      "rotacion": "",
     "garantia": "",
     "precio": 1250,
-    "imagen": "./Kit de imágenes/Biblioteca Recoleta.png"
+    "imagen": "/img/Biblioteca Recoleta.png"
   },
   {
     "id": 3,
@@ -48,7 +48,7 @@
      "rotacion": "",
     "garantia": "",
     "precio": 1250,
-       "imagen": "./Kit de imágenes/Butaca Mendoza.png"
+       "imagen": "/img/Butaca Mendoza.png"
   },
   {
     "id": 4,
@@ -65,7 +65,7 @@
     "rotacion": "360° silenciosa y suave",
     "garantia": "10 años en estructura",
     "precio": 1250,
-       "imagen": "./Kit de imágenes/Sillón Copacabana.png"
+       "imagen": "/img/Sillón Copacabana.png"
   },
   {
     "id": 5,
@@ -83,7 +83,7 @@
     "garantia": "",
     "cargaMaxima": "25 kg distribuidos",
     "precio": 1250,
-    "imagen": "./Kit de imágenes/Mesa de Centro Araucaria.png"
+    "imagen": "/img/Mesa de Centro Araucaria.png"
   },
   {
     "id": 6,
@@ -103,7 +103,7 @@
     "almacenamiento": "1 cajón + repisa inferior",
     "caracteristicas": "Cajón con cierre suave",
     "precio": 1250,
-    "imagen": "./Kit de imágenes/Mesa de Noche Aconcagua.png"
+    "imagen": "/img/Mesa de Noche Aconcagua.png"
   },
   {"id": 7,
     "nombre": "Cama Neuquén",
@@ -123,7 +123,7 @@
     "caracteristicas": "Cabecero flotante acolchado",
     "colchon": "Compatible con colchón 160×200",
     "precio": 1250,
-    "imagen": "./Kit de imágenes/Mesa de Centro Araucaria.png"
+    "imagen": "/img/Mesa de Centro Araucaria.png"
   }
  
 ]

@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto Hermanos Jota</title>
+    <link rel="shortcut icon" href="/img/logo.svg" type="image/x-icon">
     <meta name="description" content="Página de contacto con el formulario y la validación">
     <link rel="stylesheet" href="contactos.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <script src="contactos.js"></script>
+
     <div class="wrap">
-        <header>
-            <h1>Contacto Con Hermanos Jota</h1>
-            <p>Completá el formulario y te responderemos a la brevedad.</p>
-        </header>
+    <header>
+        <a href="/index.html">
+            <img class="logo-completo" src="/img/logo completo.png" alt="Logo Hermanos Jota">
+        </a>
+
+        <div class="nav-cart">
+            <nav>
+                <ul>
+                    <li><a href="/productos/productos.html">Productos</a></li>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
+                </ul>
+            </nav>   
+            <div class="cart-icon-container">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-counter" class="cart-counter">0</span>
+            </div>   
+        </div>
+    </header>
 
         <section class="card" aria-labelledby="contacto-titulo">
         <h2 id="contacto-titulo" style="position: absolute; left: -9999px ;">Formulario</h2>
@@ -87,5 +104,6 @@
     <script>
         document.getElementById('anio').textContent= new Date().getFullYear();
     </script>
+    <script src="contactos.js"></script>
 </body>
 </html>
