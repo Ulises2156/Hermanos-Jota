@@ -3,39 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo de Productos - Mueblería Hermanos Jota</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Catálogo de Productos</title>
+  <link rel="stylesheet" href="productos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+  <header>
+    <!-- Menú hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-  <header class="header">
-    <div class="logo">Mueblería Jota</div>
-    <nav class="nav">
+
+    <a href="index.html" class="logo-container">
+      <img class="logo-completo" src="Kit de imágenes/logo completo.png" alt="Logo Hermanos Jota">
+    </a>
+
+    <!-- Carrito -->
+    <div class="cart-icon-container">
+      <a href="carrito.js"><i class="fas fa-shopping-cart"></i></a>
+      <span class="cart-counter">0</span>
+    </div>
+
+
+    <nav class="nav-links">
       <a href="index.html">Inicio</a>
-      <a href="productos.html" class="active">Productos</a>
+      <a href="productos.html">Productos</a>
       <a href="contactos.html">Contacto</a>
-      <a href="carrito.html" class="cart">🛒 <span id="cart-count">0</span></a>
     </nav>
   </header>
+
 
   <section class="search-section">
     <input type="text" id="search" placeholder="Buscar productos...">
   </section>
 
-  
-  <main>
-    <h1 id = "tituloCatalogo">Catálogo de Productos</h1>
+  <main class="wrap">
+    <h1 id="tituloCatalogo">Catálogo de Productos</h1>
     <div class="catalogo" id="catalogo">
-      <!--cargamos productos con js-->
+
+      <div class="card">
+        <div class="card-content">
+          <img src="Kit de imágenes/Aparador Uspallata.png" alt="Aparador Uspallata">
+          <h3>Aparador Uspallata</h3>
+          <p class="price">$1250</p>
+        </div>
+        <a href="producto.html?id=1"><button>Ver Detalles</button></a>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <img src="Kit de imágenes/Biblioteca Recoleta.png" alt="Biblioteca Recoleta">
+          <h3>Biblioteca Recoleta</h3>
+          <p class="price">$550</p>
+        </div>
+        <a href="producto.html?id=2"><button>Ver Detalles</button></a>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <img src="Kit de imágenes/Butaca Mendoza.png" alt="Butaca Mendoza">
+          <h3>Butaca Mendoza</h3>
+          <p class="price">$1250</p>
+        </div>
+        <a href="producto.html?id=3"><button>Ver Detalles</button></a>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <img src="Kit de imágenes/Sillón Copacabana.png" alt="Sillón Copacabana">
+          <h3>Sillón Copacabana</h3>
+          <p class="price">$850</p>
+        </div>
+        <a href="producto.html?id=4"><button>Ver Detalles</button></a>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <img src="Kit de imágenes/Mesa de Centro Araucaria.png" alt="Mesa de Centro Araucaria">
+          <h3>Mesa de Centro Araucaria</h3>
+          <p class="price">$1250</p>
+        </div>
+        <a href="producto.html?id=5"><button>Ver Detalles</button></a>
+      </div>
+      
+      <div class="card">
+        <div class="card-content">
+          <img src="Kit de imágenes/Mesa de Noche Aconcagua.png" alt="Mesa de Noche Aconcagua">
+          <h3>Mesa de Noche Aconcagua</h3>
+          <p class="price">$1250</p>
+        </div>
+        <a href="producto.html?id=6"><button>Ver Detalles</button></a>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <img src="Kit de imágenes/Cama Neuquén.png" alt="Cama Neuquén">
+          <h3>Cama Neuquén</h3>
+          <p class="price">$1250</p>
+        </div>
+        <a href="producto.html?id=7"><button>Ver Detalles</button></a>
+      </div>
     </div>
   </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 Mueblería Hermanos Jota - Todos los derechos reservados</p>
+  <footer>
+    <p>&copy;2025 Hermanos Jota Furniture. Todos los derechos reservados.</p>
+    <p>Contacto: brand@hermanosjota.com</p>
   </footer>
-
-  <script src="productos.js"></script>
-  <script src="app.js"></script>
-  <script src="main.js"></script>
 </body>
 </html>
