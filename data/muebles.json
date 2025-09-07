@@ -11,10 +11,11 @@
     "modulares": "No aplica",
     "tapizado": "No aplica",
     "confort": "No aplica",
-     "rotacion": "",
+    "rotacion": "",
     "garantia": "",
     "precio": 1250,
-    "imagen": "/img/Aparador Uspallata.png"
+    "imagen": "/img/Aparador Uspallata.png",
+    "alt": "Aparador Uspallata de nogal macizo con seis puertas y tiradores metálicos en acabado latón"
   },
   {
     "id": 2,
@@ -28,10 +29,11 @@
     "modulares": "5 estantes ajustables",
     "tapizado": "No aplica",
     "confort": "No aplica",
-     "rotacion": "",
+    "rotacion": "",
     "garantia": "",
     "precio": 1250,
-    "imagen": "/img/Biblioteca Recoleta.png"
+    "imagen": "/img/Biblioteca Recoleta.png",
+    "alt": "Biblioteca Recoleta modular con estructura de acero verde y estantes de roble claro"
   },
   {
     "id": 3,
@@ -45,10 +47,11 @@
     "modulares": "No aplica",
     "tapizado": "Repelente al agua y manchas",
     "confort": "Espuma de alta densidad",
-     "rotacion": "",
+    "rotacion": "",
     "garantia": "",
     "precio": 1250,
-       "imagen": "/img/Butaca Mendoza.png"
+    "imagen": "/img/Butaca Mendoza.png",
+    "alt": "Butaca Mendoza tapizada en bouclé rosa con base de madera curvada"
   },
   {
     "id": 4,
@@ -65,7 +68,8 @@
     "rotacion": "360° silenciosa y suave",
     "garantia": "10 años en estructura",
     "precio": 1250,
-       "imagen": "/img/Sillón Copacabana.png"
+    "imagen": "/img/Sillón Copacabana.png",
+    "alt": "Sillón Copacabana lounge de cuero cognac con base giratoria en acero"
   },
   {
     "id": 5,
@@ -83,7 +87,8 @@
     "garantia": "",
     "cargaMaxima": "25 kg distribuidos",
     "precio": 1250,
-    "imagen": "/img/Mesa de Centro Araucaria.png"
+    "imagen": "/img/Mesa de Centro Araucaria.png",
+    "alt": "Mesa de centro Araucaria circular con sobre de mármol Patagonia y patas de nogal"
   },
   {
     "id": 6,
@@ -103,14 +108,16 @@
     "almacenamiento": "1 cajón + repisa inferior",
     "caracteristicas": "Cajón con cierre suave",
     "precio": 1250,
-    "imagen": "/img/Mesa de Noche Aconcagua.png"
+    "imagen": "/img/Mesa de Noche Aconcagua.png",
+    "alt": "Mesa de noche Aconcagua en roble macizo con cajón oculto y repisa inferior"
   },
-  {"id": 7,
+  {
+    "id": 7,
     "nombre": "Cama Neuquén",
     "descripcion": "Cama plataforma con cabecero flotante tapizado en lino natural y estructura de madera maciza. Su diseño minimalista y sofisticado crea un ambiente de serenidad y elegancia, perfecto para dormitorios contemporáneos que buscan paz y simplicidad.",
     "medidas": "160x200x90 cm", 
     "materiales": "Roble macizo FSC®, tapizado lino",
-    "acabado": "BAceite natural, tapizado premium",
+    "acabado": "Aceite natural, tapizado premium",
     "peso": "42 kg",
     "capacidad": "",
     "modulares": "",
@@ -123,7 +130,97 @@
     "caracteristicas": "Cabecero flotante acolchado",
     "colchon": "Compatible con colchón 160×200",
     "precio": 1250,
-    "imagen": "/img/Mesa de Centro Araucaria.png"
+    "imagen": "/img/Mesa de Centro Araucaria.png",
+    "alt": "Cama Neuquén plataforma con cabecero flotante tapizado en lino natural"
+  },
+  {
+    "id": 8,
+    "nombre": "Sofá Patagonia",
+    "descripcion": "Sofá de tres cuerpos tapizado en lino Warm Alabaster con patas cónicas de madera. Los cojines combinan espuma de alta resiliencia con plumón reciclado, ofreciendo comodidad duradera y sostenible para el hogar moderno.",
+    "medidas": "220x90x80 cm",
+    "materiales": "Madera de eucalipto certificada FSC®, lino 100% natural premium",
+    "acabado": "No aplica",
+    "peso": "",
+    "capacidad": "3 cuerpos",
+    "modulares": "No",
+    "tapizado": "Lino Warm Alabaster",
+    "confort": "Espuma HR + plumón reciclado",
+    "rotacion": "",
+    "garantia": "",
+    "precio": 1450,
+    "imagen": "/img/Sofa Patagonia.png",
+    "alt": "Sofá Patagonia de tres cuerpos tapizado en lino Warm Alabaster con patas cónicas"
+  },
+  {
+    "id": 9,
+    "nombre": "Mesa Comedor Pampa",
+    "descripcion": "Mesa extensible de roble macizo con tablero biselado y sistema de apertura suave. Su diseño robusto y elegante se adapta perfectamente a reuniones íntimas o grandes celebraciones familiares, extendiéndose de 6 a 10 comensales.",
+    "medidas": "160-240x90x75 cm",
+    "materiales": "Roble macizo FSC®, mecanismo alemán",
+    "acabado": "Aceite-cera natural",
+    "peso": "",
+    "capacidad": "6-10 comensales",
+    "modulares": "No",
+    "tapizado": "No aplica",
+    "confort": "No aplica",
+    "rotacion": "",
+    "garantia": "",
+    "precio": 1750,
+    "imagen": "/img/Mesa Comedor Pampa.png",
+    "alt": "Mesa Comedor Pampa extensible de roble macizo para 6 a 10 comensales"
+  },
+  {
+    "id": 10,
+    "nombre": "Sillas Córdoba",
+    "descripcion": "Set de cuatro sillas apilables en contrachapado moldeado de nogal y estructura tubular pintada en Sage Green. Su diseño ergonómico y materiales de calidad garantizan comodidad y durabilidad en el uso diario, perfectas para comedores contemporáneos.",
+    "medidas": "45x52x80 cm (cada una)",
+    "materiales": "Contrachapado de nogal, tubo de acero",
+    "acabado": "Laca mate, pintura epoxi",
+    "peso": "",
+    "capacidad": "Hasta 6 apiladas",
+    "modulares": "No",
+    "tapizado": "Asiento tapizado en tela Sage Green",
+    "confort": "Diseño ergonómico",
+    "rotacion": "",
+    "garantia": "",
+    "precio": 890,
+    "imagen": "/img/Sillas Cordoba.png",
+    "alt": "Set de sillas Córdoba apilables en nogal y acero pintado en verde Sage Green"
+  },
+  {
+    "id": 11,
+    "nombre": "Escritorio Costa",
+    "descripcion": "Escritorio compacto con cajón organizado y tapa pasacables integrada en bambú laminado. Ideal para espacios de trabajo en casa, combina funcionalidad moderna con estética minimalista y sostenible, perfecto para el trabajo remoto.",
+    "medidas": "120x60x75 cm",
+    "materiales": "Bambú laminado, herrajes ocultos",
+    "acabado": "Laca mate resistente",
+    "peso": "",
+    "capacidad": "1 cajón con organizador",
+    "modulares": "No",
+    "tapizado": "No aplica",
+    "confort": "No aplica",
+    "rotacion": "",
+    "garantia": "",
+    "precio": 980,
+    "imagen": "/img/Escritorio Costa.png",
+    "alt": "Escritorio Costa compacto en bambú laminado con cajón organizador y pasacables"
+  },
+  {
+    "id": 12,
+    "nombre": "Silla de Trabajo Belgrano",
+    "descripcion": "Silla ergonómica regulable en altura con respaldo de malla transpirable y asiento tapizado en tejido reciclado. Diseñada para largas jornadas de trabajo con máximo confort y apoyo lumbar, ideal para oficinas en casa y espacios de coworking.",
+    "medidas": "60x60x90-100 cm",
+    "materiales": "Malla técnica, tejido reciclado",
+    "acabado": "Base cromada, tapizado premium",
+    "peso": "",
+    "capacidad": "1 usuario",
+    "modulares": "No",
+    "tapizado": "Tejido reciclado premium",
+    "confort": "Altura + inclinación de respaldo, apoyo lumbar",
+    "rotacion": "Sí",
+    "garantia": "",
+    "precio": 720,
+    "imagen": "/img/Silla Belgrano.png",
+    "alt": "Silla de trabajo Belgrano ergonómica con respaldo de malla y asiento en tejido reciclado"
   }
- 
 ]

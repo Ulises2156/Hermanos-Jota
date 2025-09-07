@@ -11,26 +11,35 @@
 </head>
 <body>
 
-    <div class="wrap">
     <header>
-        <a href="/index.html">
-            <img class="logo-completo" src="/img/logo completo.png" alt="Logo Hermanos Jota">
-        </a>
+    <!-- Menú hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
 
-        <div class="nav-cart">
-            <nav>
-                <ul>
-                    <li><a href="/productos/productos.html">Productos</a></li>
-                    <li><a href="#about">Sobre Nosotros</a></li>
-                    <li><a href="contactos.html">Contacto</a></li>
-                </ul>
-            </nav>   
-            <div class="cart-icon-container">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="cart-counter" class="cart-counter">0</span>
-            </div>   
-        </div>
-    </header>
+    <!-- Logo -->
+    <a href="index.html" class="logo-container">
+      <img class="logo-completo" src="/img/logo completo.png" alt="Logo Hermanos Jota">
+    </a>
+
+    <!-- Navegación + Carrito -->
+    <div class="nav-cart">
+      <nav>
+        <ul>
+          <li><a href="/productos/productos.html">Productos</a></li>
+          <li><a href="#about">Sobre Nosotros</a></li>
+          <li><a href="/contacto/contactos.html">Contacto</a></li>
+        </ul>
+      </nav>   
+      <div class="cart-icon-container">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-counter" class="cart-counter">0</span>
+      </div>   
+    </div>
+  </header>
 
         <section class="card" aria-labelledby="contacto-titulo">
         <h2 id="contacto-titulo" style="position: absolute; left: -9999px ;">Formulario</h2>
@@ -92,7 +101,6 @@
             ¡Gracias! Tu mensaje fue enviado correctamente. Le enviaremos un mensaje de la empresa Hermanos Jota.
 
             </div>
-        </div>
 
         </form>    
     </section>
