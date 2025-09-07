@@ -1,66 +1,101 @@
 const currentUrl = window.location.href;
 console.log(currentUrl);
 
-index=currentUrl.indexOf("id")
-urlId=currentUrl.slice(index+3,)
-//console.log(index,urlId);
-urlId=parseInt(urlId)
-
+const urlParams = new URLSearchParams(currentUrl)
+const urlId = urlParams.get('id');
 
 const contenido = document.getElementById("contenido"); // 
 
-  async function fetchMuebles() {
-      try {
-        // Hacemos la solicitud HTTP: PEDIMOS A LA API, QUE NOS DE LOS POSTS (QUE USAREMOS COMO muebles)
-        const respuesta = await fetch("/data/muebles.json");
-        if (!respuesta.ok) throw new Error("No se pudo cargar muebles.json");
-        
-        const muebles = await respuesta.json(); // Extraemos el JSON de la respuesta
+ async function fetchDetalleMueble() {
+  try {
+    // Obtenemos el parámetro de la URL (id del producto)
+    const params = new URLSearchParams(window.location.search);
+    const urlId = parseInt(params.get("id"));
 
-      
-        // Creamos una tarjeta por cada curso.
-        // foreach recorre cada elemento del array
-        muebles.forEach(mueble => {
-          if (mueble.id===urlId){
-            
-            const card = document.createElement("div"); // Creamos un div
-          card.className = "card"; // Le asignamos clase CSS para estilo
+    // Pedimos el JSON
+    const respuesta = await fetch("/data/muebles.json");
+    if (!respuesta.ok) throw new Error("No se pudo cargar muebles.json");
 
-          //imagen para cada mueble
-          const imagen = document.createElement("img"); // Creamos un elemento de imagen
-          imagen.src = mueble.imagen;
-          imagen.alt = mueble.nombre;
+    const muebles = await respuesta.json();
 
-          const titulo = document.createElement("h3"); // Creamos un título para. la tarjeta
-          titulo.textContent = mueble.nombre; // Llenamos el contenido con el título que nos llega de cada elemento de "courses"
+    // Buscamos el mueble con el id correspondiente
+    const mueble = muebles.find(item => item.id === urlId);
 
-          const btnDetail = document.createElement("a"); // botón para ver detalle
-          btnDetail.textContent = "Ver Detalle"; 
-          // le ponemos el texto que queremos que muestre el botón
-          btnDetail.setAttribute('href',`/./detalleProducto/producto.html?id=${mueble.id}`)
+    if (mueble) {
+      const contenido = document.getElementById("contenido");
+      contenido.innerHTML = ""; // limpiar contenido previo
 
-          // Evento onclick al hacer clic: mostramos detalle (esta es otra forma de hacer el addEventListener, ambas están bien)
-          btnDetail.onclick = () => showDetail(mueble);
-          // Alternativa: btnDetail.addEventListener("click", () => showDetail(course));
+      // Imagen
+      const imagen = document.createElement("img");
+      imagen.src = mueble.imagen;
+      imagen.alt = mueble.alt || mueble.nombre;
+      imagen.className = "imagen-producto";
 
-          // Armamos la tarjetita (le agregamos al div el titulo y el botón de ver detalle)
-          card.appendChild(imagen);
-          card.appendChild(titulo);
-          card.appendChild(btnDetail);
+      // Contenedor de detalles
+      const detalles = document.createElement("div");
+      detalles.className = "detalles-producto";
 
-          // Agregamos la tarjeta al contenedor de tarjetas
-          contenido.appendChild(card);
+      // Título
+      const titulo = document.createElement("h2");
+      titulo.textContent = mueble.nombre;
+
+      // Subtítulo
+      const subtitulo = document.createElement("h3");
+      subtitulo.textContent = "Descripción";
+
+      // Descripción
+      const descripcion = document.createElement("p");
+      descripcion.textContent = mueble.descripcion;
+
+      // Lista de características
+      const lista = document.createElement("ul");
+
+      const caracteristicas = [
+        { label: "Medidas", value: mueble.medidas },
+        { label: "Materiales", value: mueble.materiales },
+        { label: "Acabado", value: mueble.acabado },
+        { label: "Peso", value: mueble.peso },
+        { label: "Capacidad", value: mueble.capacidad }
+      ];
+
+      caracteristicas.forEach(c => {
+        if (c.value && c.value.trim() !== "") {
+          const li = document.createElement("li");
+          li.textContent = `${c.label}: ${c.value}`;
+          lista.appendChild(li);
         }
-          } );
-          
+      });
 
-      } catch (error) {
-        // Manejo de errores: si algo sale mal en el pedido. Vamos a hacer esto:
-        console.error("Error al cargar productos:", error); //mostrar error por consola
-        // Mostramos mensaje al usuario
-        error = document.createElement("p")
-        error.textContent = "No se pudieron cargar los productos"
-      }
+      // Precio
+      const precio = document.createElement("p");
+      precio.innerHTML = `Precio: <span class="precio">$ ${mueble.precio}</span>`;
+
+      // Botón
+      const boton = document.createElement("button");
+      boton.className = "btn-agregar-al-carrito";
+      boton.id = "boton-agregar-al-carrito";
+      boton.textContent = "Añadir al carrito";
+      // Acá podés agregar el eventListener para carrito
+      // boton.addEventListener("click", () => addToCart(mueble));
+
+      // Armamos estructura
+      detalles.appendChild(titulo);
+      detalles.appendChild(subtitulo);
+      detalles.appendChild(descripcion);
+      detalles.appendChild(lista);
+      detalles.appendChild(precio);
+      detalles.appendChild(boton);
+
+      contenido.appendChild(imagen);
+      contenido.appendChild(detalles);
+    } else {
+      document.getElementById("contenido").innerHTML = "<p>Producto no encontrado</p>";
     }
 
-    fetchMuebles();
+  } catch (error) {
+    console.error("Error al cargar detalle del producto:", error);
+    document.getElementById("contenido").innerHTML = "<p>No se pudo cargar el producto</p>";
+  }
+}
+
+fetchDetalleMueble()
