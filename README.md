@@ -57,4 +57,4 @@ En esta primera etapa (Sprint 1 y 2) se desarrolla únicamente el **frontend**, 
 
 ## 🚀 Despliegue
 
-👉 \[Enlace al sitio en hosting estático] (colocar URL aquí cuando esté publicado)
+👉 https://ulises2156.github.io/Hermanos-Jota/
