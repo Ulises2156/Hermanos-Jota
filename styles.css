@@ -289,17 +289,7 @@ footer {
     display: none;
   }
 
-  .logo-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 
-  .cart-icon-container {
-    position: absolute;
-    right: 2rem;
-    top: 1rem;
-  }
 
   .hero-content h1 {
     font-size: 3rem;
