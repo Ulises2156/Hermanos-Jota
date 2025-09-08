@@ -28,7 +28,7 @@ async function fetchDestacados() {
           btnDetail.textContent = "Ver Detalle"; 
           btnDetail.className = "button";
           // le ponemos el texto que queremos que muestre el botón
-          btnDetail.setAttribute('href',`/detalleProducto/producto.html?id=${mueble.id}`)
+          btnDetail.setAttribute('href',`detalleProducto/producto.html?id=${mueble.id}`)
 
           // Evento onclick al hacer clic: mostramos detalle (esta es otra forma de hacer el addEventListener, ambas están bien)
          // btnDetail.onclick = () => showDetail(mueble);
