@@ -1,5 +1,12 @@
 const grid = document.getElementById("product-grid"); // contenedor de los productos
 
+
+function cambiarPathImagen(path){
+    if (path.startsWith("../")){
+        return path.replace("../", "img/");
+    }
+    return path;
+}
 async function fetchDestacados() {
       try {
         // Hacemos la solicitud HTTP: PEDIMOS A LA API, QUE NOS DE LOS POSTS (QUE USAREMOS COMO muebles)
@@ -18,7 +25,7 @@ async function fetchDestacados() {
 
           //imagen para cada mueble
           const imagen = document.createElement("img"); // Creamos un elemento de imagen
-          imagen.src = mueble.imagen;
+          imagen.src = cambiarPathImagen(mueble.imagen);
           imagen.alt = mueble.nombre;
 
           const titulo = document.createElement("h3"); // Creamos un título para. la tarjeta
