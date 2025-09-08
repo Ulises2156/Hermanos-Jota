@@ -6,6 +6,8 @@ const urlId = urlParams.get('id');
 
 const contenido = document.getElementById("contenido"); // 
 
+let contadorCarrito = 0;
+
  async function fetchDetalleMueble() {
   try {
     // Obtenemos el parámetro de la URL (id del producto)
@@ -75,6 +77,13 @@ const contenido = document.getElementById("contenido"); //
       boton.className = "btn-agregar-al-carrito";
       boton.id = "boton-agregar-al-carrito";
       boton.textContent = "Añadir al carrito";
+      
+      boton.addEventListener("click", () => {
+        contadorCarrito++;
+        actualizarContadorCarrito();
+        alert("Producto añadido al carrito");
+      });
+      
       // Acá podés agregar el eventListener para carrito
       // boton.addEventListener("click", () => addToCart(mueble));
 
@@ -97,5 +106,13 @@ const contenido = document.getElementById("contenido"); //
     document.getElementById("contenido").innerHTML = "<p>No se pudo cargar el producto</p>";
   }
 }
+
+function actualizarContadorCarrito() {
+  const contador = document.getElementById("cart-counter");
+  contador.textContent = contadorCarrito;
+}
+
+
+
 
 fetchDetalleMueble()
