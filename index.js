@@ -3,7 +3,7 @@ const grid = document.getElementById("product-grid"); // contenedor de los produ
 async function fetchDestacados() {
       try {
         // Hacemos la solicitud HTTP: PEDIMOS A LA API, QUE NOS DE LOS POSTS (QUE USAREMOS COMO muebles)
-        const respuesta = await fetch("/data/muebles.json");
+        const respuesta = await fetch("data/muebles.json");
         if (!respuesta.ok) throw new Error("No se pudo cargar muebles.json");
         
         const muebles = await respuesta.json(); // Extraemos el JSON de la respuesta
@@ -28,7 +28,7 @@ async function fetchDestacados() {
           btnDetail.textContent = "Ver Detalle"; 
           btnDetail.className = "button";
           // le ponemos el texto que queremos que muestre el botón
-          btnDetail.setAttribute('href',`/./detalleProducto/producto.html?id=${mueble.id}`)
+          btnDetail.setAttribute('href',`/detalleProducto/producto.html?id=${mueble.id}`)
 
           // Evento onclick al hacer clic: mostramos detalle (esta es otra forma de hacer el addEventListener, ambas están bien)
          // btnDetail.onclick = () => showDetail(mueble);
