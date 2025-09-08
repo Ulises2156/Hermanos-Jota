@@ -210,6 +210,7 @@ nav ul li a {
 .product-grid {
   display: flex;
   flex-wrap: wrap;
+
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
@@ -303,3 +304,5 @@ footer {
     padding: 4rem;
   }
 }
+
+
