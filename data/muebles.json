@@ -31,7 +31,7 @@
     "confort": "No aplica",
     "rotacion": "",
     "garantia": "",
-    "precio": 1250,
+    "precio": 550,
     "imagen": "/img/Biblioteca Recoleta.png",
     "alt": "Biblioteca Recoleta modular con estructura de acero verde y estantes de roble claro"
   },
@@ -165,7 +165,7 @@
     "confort": "No aplica",
     "rotacion": "",
     "garantia": "",
-    "precio": 1750,
+    "precio": 1200,
     "imagen": "/img/Mesa Comedor Pampa.png",
     "alt": "Mesa Comedor Pampa extensible de roble macizo para 6 a 10 comensales"
   },
@@ -184,7 +184,7 @@
     "rotacion": "",
     "garantia": "",
     "precio": 890,
-    "imagen": "/img/Sillas Cordoba.png",
+    "imagen": "/img/Sillas Córdoba.png",
     "alt": "Set de sillas Córdoba apilables en nogal y acero pintado en verde Sage Green"
   },
   {
@@ -220,7 +220,7 @@
     "rotacion": "Sí",
     "garantia": "",
     "precio": 720,
-    "imagen": "/img/Silla Belgrano.png",
+    "imagen": "/img/Silla de Trabajo Belgrano.png",
     "alt": "Silla de trabajo Belgrano ergonómica con respaldo de malla y asiento en tejido reciclado"
   }
 ]
