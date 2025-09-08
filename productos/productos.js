@@ -27,6 +27,7 @@
 
           const btnDetail = document.createElement("a"); // botón para ver detalle
           btnDetail.textContent = "Ver Detalle"; 
+          btnDetail.className = "button";
           // le ponemos el texto que queremos que muestre el botón
           btnDetail.setAttribute('href',`/./detalleProducto/producto.html?id=${mueble.id}`)
 
