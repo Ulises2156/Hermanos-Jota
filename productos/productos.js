@@ -29,11 +29,14 @@
           btnDetail.textContent = "Ver Detalle"; 
           btnDetail.className = "button";
           // le ponemos el texto que queremos que muestre el botón
-          btnDetail.setAttribute('href',`././detalleProducto/producto.html?id=${mueble.id}`)
+          //btnDetail.setAttribute('href',`../../detalleProducto/producto.html?id=${mueble.id}`)
 
           // Evento onclick al hacer clic: mostramos detalle (esta es otra forma de hacer el addEventListener, ambas están bien)
-          btnDetail.onclick = () => showDetail(mueble);
+         // btnDetail.onclick = () => showDetail(mueble);
           // Alternativa: btnDetail.addEventListener("click", () => showDetail(course));
+          btnDetail.onclick = () => {
+  window.location.href = `../detalleProducto/producto.html?id=${mueble.id}`;
+};
 
           // Armamos la tarjetita (le agregamos al div el titulo y el botón de ver detalle)
           card.appendChild(imagen);
