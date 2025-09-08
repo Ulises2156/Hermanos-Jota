@@ -13,7 +13,7 @@ const contenido = document.getElementById("contenido"); //
     const urlId = parseInt(params.get("id"));
 
     // Pedimos el JSON
-    const respuesta = await fetch("/data/muebles.json");
+    const respuesta = await fetch("../data/muebles.json");
     if (!respuesta.ok) throw new Error("No se pudo cargar muebles.json");
 
     const muebles = await respuesta.json();
