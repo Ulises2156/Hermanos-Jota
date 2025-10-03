@@ -56,6 +56,30 @@ app.listen(PORT, () => {
   console.log(`Servidor corriendo exitosamente en http://localhost:${PORT}`);
 });
 
+// Middleware global: para los log de cada request
+
+app.use((req, res, next) =>{
+  console.log(`[${new Date().toDateString()}] ${req.method} ${req.url}`);
+  next();
+});
+
+// Importo las rutas de productos
+import productoRouter from './routes/productos.js';
+app.use('/api/productos', productoRouter);
+
+
+//Middleware 404 (si no se encuentra la ruta)
+app.use((req, res)=>{
+ res.status(404).json({mensaje: "Ruta no encontrada"}); 
+});
+
+//Middleware para centralizar errores
+app.use((err, req, res, next) =>{
+  console.log('Error interno:', err);
+  res.status(500).json({mensaje: 'Error interno del servidor'});
+});
+
+
 
 async function cargarDatos() {
   try {
