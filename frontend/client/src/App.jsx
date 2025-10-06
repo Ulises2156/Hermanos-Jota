@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -9,7 +9,7 @@ import Contacto from './pages/Contacto';
 export default function App() {
   return (
     <CartProvider>
-      <BrowserRouter>
+      
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -17,7 +17,7 @@ export default function App() {
             <Route path="contacto" element={<Contacto />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      
     </CartProvider>
   );
 }
