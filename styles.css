@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #A0522D;   
-  --secondary-color: #CBB68A; 
-  --accent-color: #D2691E;    
+  --primary-color: #A0522D;
+  --secondary-color: #CBB68A;
+  --accent-color: #D2691E;
   --light-text-color: #f0f0f0;
   --white: #ffffff;
   --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -21,29 +21,24 @@ body {
   color: #333;
 }
 
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-   background-color: #F2E5D5;;
+  background-color: #F2E5D5;
   border-bottom: 1px solid #ddd;
-  position: relative;
-  box-shadow: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo-container img {
   height: 50px;
 }
 
-/* Navegación */
 .nav-cart {
   display: flex;
   align-items: center;
@@ -60,6 +55,11 @@ nav ul li a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
 }
 
 .cart-icon-container {
@@ -79,13 +79,12 @@ nav ul li a {
   font-size: 12px;
 }
 
-/* Menú hamburguesa */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  z-index: 1001; /* encima del menú */
+  z-index: 1001; 
 }
 
 .hamburger span {
@@ -96,26 +95,31 @@ nav ul li a {
   transition: all 0.3s ease;
 }
 
-/* Ocultar checkbox */
 #menu-toggle {
   display: none;
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-  nav {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-cart {
+    flex-direction: column;
     position: fixed;
     top: 0;
-    right: -250px; /* escondido */
+    right: -250px;
     width: 250px;
     height: 100vh;
     background: #fff;
     border-left: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    padding: 70px 20px;
+    padding: 70px 20px 20px;
     transition: right 0.3s ease;
-    z-index: 1000;
+    z-index: 999;
+  }
+
+  .nav-cart nav {
+    width: 100%;
   }
 
   nav ul {
@@ -123,16 +127,10 @@ nav ul li a {
     gap: 20px;
   }
 
-  /* Slide al hacer click */
-  #menu-toggle:checked ~ .nav-cart nav {
+  #menu-toggle:checked ~ .nav-cart {
     right: 0;
   }
-
-  .hamburger {
-    display: flex;
-  }
-
-  /* Animación X cuando se abre */
+  
   #menu-toggle:checked + .hamburger span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
@@ -143,6 +141,21 @@ nav ul li a {
 
   #menu-toggle:checked + .hamburger span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+@media (min-width: 769px) {
+  .nav-cart {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  
+  .hamburger {
+    display: none;
   }
 }
 
@@ -210,7 +223,6 @@ nav ul li a {
 .product-grid {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2rem;
@@ -274,24 +286,6 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .nav-links {
-    display: flex !important;
-    position: static;
-    flex-direction: row;
-    background: none;
-    padding: 0;
-  }
-
-  .nav-links a {
-    margin: 0 1rem;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-
-
   .hero-content h1 {
     font-size: 3rem;
   }
@@ -304,5 +298,3 @@ footer {
     padding: 4rem;
   }
 }
-
-
