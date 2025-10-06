@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mueblería Hermanos Jota</title>
+  <link rel="shortcut icon" href="img/logo.svg" type="image/svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+    <!-- Menú hamburguesa -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <!-- Logo -->
+    <a href="/" class="logo-container">
+      <img class="logo-completo" src="img/logo completo.png" alt="Logo Hermanos Jota">
+    </a>
+
+    <!-- Navegación + Carrito -->
+    <div class="nav-cart">
+      <nav>
+        <ul>
+          <li><a href="productos/productos.html">Productos</a></li>
+          <li><a href="contacto/contactos.html">Contacto</a></li>
+        </ul>
+      </nav>   
+      <div class="cart-icon-container">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-counter" class="cart-counter">0</span>
+      </div>   
+    </div>
+  </header>
+
+
+  <main class="main">
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h1>Tradición y Diseño en Muebles de Madera</h1>
+        <p>30 años de experiencia, calidad que se siente, diseño que perdura.</p>
+        <a href="productos/productos.html" class="button">Explorar Catálogo</a>
+      </div>
+    </section>
+
+    <section id="product-grid" class="featured-products product-grid">
+      <!--DESTACADOS-->
+    </section>
+  </main>
+  <footer>
+    <p>&copy;2025 Hermanos Jota Furniture. Todos los derechos reservados.</p>
+    <p>Contacto: brand@hermanosjota.com</p>
+    <p>Redescubriendo el arte de vivir desde 2025</p>
+  </footer>
+ 
+  <script src="index.js"></script>
+</body>
+</html>
