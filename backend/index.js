@@ -6,7 +6,7 @@ import { readFile } from 'fs/promises'; // Para la versión asíncrona
 const app = express();
  
 // 3. Definir el puerto. Es una buena práctica usar una variable de entorno para producción.
-const PORT = 4000;
+const PORT = 3000;
  
 // 4. Definir nuestra primera ruta (endpoint)
 // Cuando un cliente haga una petición GET a la raíz ('/'), se ejecutará esta función.

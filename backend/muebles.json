@@ -14,7 +14,7 @@
     "rotacion": "",
     "garantia": "",
     "precio": 1250,
-    "imagen": "../img/Aparador Uspallata.png",
+    "imagen": "/img/Aparador Uspallata.png",
     "alt": "Aparador Uspallata de nogal macizo con seis puertas y tiradores metálicos en acabado latón"
   },
   {
@@ -32,7 +32,7 @@
     "rotacion": "",
     "garantia": "",
     "precio": 550,
-    "imagen": "../img/Biblioteca Recoleta.png",
+    "imagen": "/img/Biblioteca Recoleta.png",
     "alt": "Biblioteca Recoleta modular con estructura de acero verde y estantes de roble claro"
   },
   {
@@ -50,7 +50,7 @@
     "rotacion": "",
     "garantia": "",
     "precio": 1250,
-    "imagen": "../img/Butaca Mendoza.png",
+    "imagen": "/img/Butaca Mendoza.png",
     "alt": "Butaca Mendoza tapizada en bouclé rosa con base de madera curvada"
   },
   {
@@ -68,7 +68,7 @@
     "rotacion": "360° silenciosa y suave",
     "garantia": "10 años en estructura",
     "precio": 1250,
-    "imagen": "../img/Sillón Copacabana.png",
+    "imagen": "/img/Sillón Copacabana.png",
     "alt": "Sillón Copacabana lounge de cuero cognac con base giratoria en acero"
   },
   {
@@ -87,7 +87,7 @@
     "garantia": "",
     "cargaMaxima": "25 kg distribuidos",
     "precio": 1250,
-    "imagen": "../img/Mesa de Centro Araucaria.png",
+    "imagen": "/img/Mesa de Centro Araucaria.png",
     "alt": "Mesa de centro Araucaria circular con sobre de mármol Patagonia y patas de nogal"
   },
   {
@@ -108,7 +108,7 @@
     "almacenamiento": "1 cajón + repisa inferior",
     "caracteristicas": "Cajón con cierre suave",
     "precio": 1250,
-    "imagen": "../img/Mesa de Noche Aconcagua.png",
+    "imagen": "/img/Mesa de Noche Aconcagua.png",
     "alt": "Mesa de noche Aconcagua en roble macizo con cajón oculto y repisa inferior"
   },
   {
@@ -130,7 +130,7 @@
     "caracteristicas": "Cabecero flotante acolchado",
     "colchon": "Compatible con colchón 160×200",
     "precio": 1250,
-    "imagen": "../img/Cama Neuquen.png",
+    "imagen": "/img/Cama Neuquen.png",
     "alt": "Cama Neuquén plataforma con cabecero flotante tapizado en lino natural"
   },
   {
@@ -148,7 +148,7 @@
     "rotacion": "",
     "garantia": "",
     "precio": 1450,
-    "imagen": "../img/Sofa Patagonia.png",
+    "imagen": "/img/Sofa Patagonia.png",
     "alt": "Sofá Patagonia de tres cuerpos tapizado en lino Warm Alabaster con patas cónicas"
   },
   {
@@ -166,7 +166,7 @@
     "rotacion": "",
     "garantia": "",
     "precio": 1200,
-    "imagen": "../img/Mesa Comedor Pampa.png",
+    "imagen": "/img/Mesa Comedor Pampa.png",
     "alt": "Mesa Comedor Pampa extensible de roble macizo para 6 a 10 comensales"
   },
   {
@@ -184,7 +184,7 @@
     "rotacion": "",
     "garantia": "",
     "precio": 890,
-    "imagen": "../img/Sillas Cordoba.png",
+    "imagen": "/img/Sillas Cordoba.png",
     "alt": "Set de sillas Córdoba apilables en nogal y acero pintado en verde Sage Green"
   },
   {
@@ -202,7 +202,7 @@
     "rotacion": "",
     "garantia": "",
     "precio": 980,
-    "imagen": "../img/Escritorio Costa.png",
+    "imagen": "/img/Escritorio Costa.png",
     "alt": "Escritorio Costa compacto en bambú laminado con cajón organizador y pasacables"
   },
   {
@@ -220,7 +220,7 @@
     "rotacion": "Sí",
     "garantia": "",
     "precio": 720,
-    "imagen": "../img/Silla de Trabajo Belgrano.png",
+    "imagen": "/img/Silla de Trabajo Belgrano.png",
     "alt": "Silla de trabajo Belgrano ergonómica con respaldo de malla y asiento en tejido reciclado"
   }
 ]
