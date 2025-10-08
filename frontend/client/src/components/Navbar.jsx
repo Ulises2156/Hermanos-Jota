@@ -66,11 +66,11 @@ export default function Navbar() {
           >
             Contacto
           </Link>
-          <button 
+          <Link 
+            to="/carrito"
             className="cart-button" 
             aria-label={`Carrito de compras, ${cartCount} productos`}
-            disabled
-            title="Carrito (próximamente)"
+            onClick={closeMenu}
           >
             <span className="cart-icon">🛒</span>
             {cartCount > 0 && (
@@ -78,7 +78,7 @@ export default function Navbar() {
                 {cartCount > 9 ? '9+' : cartCount}
               </span>
             )}
-          </button>
+          </Link>
         </nav>
 
         {mobileMenuOpen && (

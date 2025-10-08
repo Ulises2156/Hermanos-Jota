@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Catalogo from './pages/Catalogo';
 import Contacto from './pages/Contacto';
+import Carrito from './pages/Carrito';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="catalogo" element={<Catalogo />} />
             <Route path="contacto" element={<Contacto />} />
+            <Route path="carrito" element={<Carrito />} />
           </Route>
         </Routes>
       
