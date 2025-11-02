@@ -25,7 +25,7 @@ export default function DetalleProducto() {
   const handleDelete = async () => {
     if (window.confirm('¿Estas seguro de eliminar este producto?')) {
       await deleteProduct(id);
-      navigate('/productos');
+      navigate('/catalogo');
     }
   };
 

@@ -43,14 +43,21 @@ export default function CrearProducto() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='modern-contact-form'>
       <h1>Crear Producto</h1>
-      <input name="nombre" placeholder="Nombre" onChange={handleChange} required />
-      <input name="descripcion" placeholder="Descripción" onChange={handleChange} />
-      <input name="precio" type="number" placeholder="Precio" onChange={handleChange} required />
-      <input name="stock" type="number" placeholder="Stock" onChange={handleChange} />
-      <input name="imagenUrl" placeholder="URL Imagen" onChange={handleChange} />
-      <button type="submit">Crear</button>
-    </form>
+      <form className="form-grid" onSubmit={handleSubmit}>
+          <div className='form-field'>
+            <input name="nombre" placeholder="Nombre" onChange={handleChange} required />
+          
+          </div>
+          
+          <input name="descripcion" placeholder="Descripción" onChange={handleChange} />
+          <input name="precio" type="number" placeholder="Precio" onChange={handleChange} required />
+          <input name="stock" type="number" placeholder="Stock" onChange={handleChange} />
+          <input name="imagenUrl" placeholder="URL Imagen" onChange={handleChange} />
+          <button type="submit">Crear</button>
+     
+      </form>
+    </div>
   );
 }
