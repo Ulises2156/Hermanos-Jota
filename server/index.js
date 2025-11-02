@@ -6,11 +6,12 @@ import cors from 'cors'; // para permitir CORS
 import { readFile } from 'fs/promises'; // Para la versión asíncrona
 import productoRouter from './routes/productos.js';
 
+
 // 2. Crear una instancia de la aplicación
 const app = express();
  
 // 3. Definir el puerto. Es una buena práctica usar una variable de entorno para producción.
-const PORT = 3000;
+const PORT = process.env.PORT || 5000;
  
 
 //Cors
@@ -18,6 +19,8 @@ app.use(cors({
   origin: ['http://localhost:5173', 'https://ulises2156.github.io'], // Reemplaza con el origen de tu frontend
   credentials: true
 }));
+
+
 
 // Middleware global: para los log de cada request
 
@@ -49,13 +52,34 @@ app.use((err, req, res, next) =>{
   res.status(500).json({mensaje: 'Error interno del servidor'});
 });
 
+async function importarDatosIniciales() {
+  try {
+    const count = await Product.countDocuments();
+    
+    if (count === 0) {
+      console.log(' Importando datos desde muebles.json...');
+      
+      const data = await readFile('/mubles.json', { encoding: 'utf-8' });
+      const productos = JSON.parse(data);
+      
+      await Product.insertMany(productos);
+      console.log(` ${productos.length} productos importados a MongoDB`);
+    } else {
+      console.log(` Ya existen ${count} productos en la base de datos`);
+    }
+  } catch (error) {
+    console.error(' Error al importar datos:', error);
+    
+  }
+}
 
 
 // 5. Poner el servidor a escuchar peticiones despues de conectar con la db
 
 connectToDatabase()
 .then(()=>{
-  console.log("Base de datos ocnectada correctamente");
+  console.log("Base de datos conectada correctamente");
+
   
   app.listen(PORT, () => {
   console.log(`Servidor corriendo exitosamente en http://localhost:${PORT}`);

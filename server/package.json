@@ -21,11 +21,12 @@
   "homepage": "https://github.com/Ulises2156/Hermanos-Jota#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "react-router-dom": "^7.9.3",
     "dotenv": "^17.2.3",
+    "express": "^5.1.0",
     "mongodb": "^6.20.0",
-    "mongoosh": "^0.0.7"
+    "mongoose": "^8.19.2",
+    "mongoosh": "^0.0.7",
+    "react-router-dom": "^7.9.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
