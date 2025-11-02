@@ -3,12 +3,12 @@ import express from 'express';
 import cors from 'cors'; // para permitir CORS
 import { readFile } from 'fs/promises'; // Para la versión asíncrona
 import productoRouter from './routes/productos.js';
-
+import { connectToDatabase } from "./db.js";
 // 2. Crear una instancia de la aplicación
 const app = express();
  
 // 3. Definir el puerto. Es una buena práctica usar una variable de entorno para producción.
-const PORT = 3000;
+const PORT = process.env.PORT || 5000;
  
 
 //Cors
@@ -16,6 +16,9 @@ app.use(cors({
   origin: ['http://localhost:5173', 'https://ulises2156.github.io'], // Reemplaza con el origen de tu frontend
   credentials: true
 }));
+
+app.use(express.json());
+
 
 // Middleware global: para los log de cada request
 
@@ -31,6 +34,8 @@ app.use((req, res, next) =>{
 app.get('/', (req, res) => {
   res.send('¡Bienvenido al API de Mueblería Jota!');
 });
+
+
 
 // usarmos el router de productos
 app.use('/api/productos', productoRouter);  
@@ -49,11 +54,11 @@ app.use((err, req, res, next) =>{
 
 
 
-// 5. Poner el servidor a escuchar peticiones
+/*// 5. Poner el servidor a escuchar peticiones
 app.listen(PORT, () => {
   console.log(`Servidor corriendo exitosamente en http://localhost:${PORT}`);
 });
-
+*/
 
 
 // GET para obtener todos los productos
