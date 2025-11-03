@@ -1,13 +1,16 @@
-import React from 'react'
-import ProductCard from './ProductCard'
+import React from 'react';
+import ProductCard from './ProductCard';
+import { Link } from 'react-router-dom';
 
-export default function ProductList({ productos, onSelect }) {
+export default function ProductList({ productos }) {
   if (!productos.length) return <p>No hay productos para mostrar.</p>
 
   return (
     <div className="product-grid">
       {productos.map((p)=> (
-        <ProductCard key={p.id} producto={p} onClick={onSelect} />
+        <Link key={p._id} to = {`/catalogo/${p._id}`} style= {{textDecoration: 'none', color: 'inherit'}}>
+        <ProductCard producto={p} />
+        </Link>
       ))}
     </div>
   )
