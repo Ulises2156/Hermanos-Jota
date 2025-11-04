@@ -1,9 +1,10 @@
 // Siempre apuntamos al backend en desarrollo
-const API_URL = 'http://localhost:5000/api/productos';
+const API_URL = import.meta.env.VITE_API_URL;
+
 
 export async function fetchProducts() {
   try {
-    const res = await fetch(API_URL);
+    const res = await fetch(`${API_URL}/productos`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
   } catch (err) {
@@ -14,7 +15,7 @@ export async function fetchProducts() {
 
 export async function fetchProductById(id) {
   try {
-    const res = await fetch(`${API_URL}/${id}`);
+    const res = await fetch(`${API_URL}/productos/${id}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
   } catch (err) {
@@ -25,7 +26,7 @@ export async function fetchProductById(id) {
 
 export async function createProduct(product) {
   try {
-    const res = await fetch(API_URL, {
+    const res = await fetch(`${API_URL}/productos`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(product),
@@ -47,7 +48,7 @@ export async function createProduct(product) {
 
 export async function deleteProduct(id) {
   try {
-    const res = await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
+    const res = await fetch(`${API_URL}/productos/${id}`, { method: 'DELETE' });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
   } catch (err) {
