@@ -15,10 +15,17 @@ const PORT = process.env.PORT || 5000;
  
 
 //Cors
-app.use(cors({
+/*app.use(cors({
   origin: ['http://localhost:5173', 'https://ulises2156.github.io'], // Reemplaza con el origen de tu frontend
   credentials: true
 }));
+*/
+app.use(cors({
+  origin: ['http://localhost:5173', 'https://hermanos-jota-vercel.vercel.app'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 
 app.use(express.json());
 
