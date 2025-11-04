@@ -2,7 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/Hermanos-Jota/',
+ // base: '/Hermanos-Jota/',
+  base: '/',
   plugins: [react()],
   server: {
     port: 5173,
