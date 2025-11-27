@@ -1,7 +1,7 @@
 // routes de productos
 import { Router } from "express";
 import Product from "../models/Product.js";
-
+import {authRequire} from '../middlewares/auth.middleware.js';
 
 
 
@@ -13,13 +13,6 @@ router.use((req, res, next) =>{
 });
 
 
-/*
-// Agregamos la función para cargar los datos de JSON
-async function cargarDatos(){
-    const data = await readFile('muebles.json', {encoding: 'utf-8'});
-    return JSON.parse(data);
-}
-*/
 
 //GET para todos los productos
 router.get('/', async(req, res, next) =>{
@@ -45,7 +38,7 @@ router.get('/:id', async(req, res, next)=> {
 });
 
 // Post /api/productos para crear un nuevo producto
-router.post('/', async(req, res, next) => {
+router.post('/', authRequire, async(req, res, next) => {
     try{
         const nuevoProducto = new Product(req.body);
         const guardado = await nuevoProducto.save();
@@ -55,7 +48,7 @@ router.post('/', async(req, res, next) => {
     }
 });
 // PUT /api/productos/:id para actualizar un producto existente
-router.put('/:id', async(req, res, next) => {
+router.put('/:id', authRequire, async(req, res, next) => {
     try{
         const actualizado = await Product.findByIdAndUpdate(
             req.params.id,
@@ -72,7 +65,7 @@ router.put('/:id', async(req, res, next) => {
 });
 
 // agrego el DELETE /api/productos/:id
-router.delete('/:id', async(req, res, next) => {
+router.delete('/:id', authRequire, async(req, res, next) => {
     try{
         const eliminado = await Product.findByIdAndDelete(req.params.id);
         if (!eliminado){
